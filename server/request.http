@@ -1,0 +1,48 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "phoong",
+    "password": "phong1998"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "phongnt",
+    "password": "phong1998"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjRhY2EwOGI0NTdmZDQ4YWRlYmU3OWQiLCJpYXQiOjE2NTA2MTI2MDR9.X7c0mIzmY_8jNo26cT85Z29uWoN5PP2zdA-ExtHe4ac
+
+{
+    "title": "react",
+    "description": "react",
+    "url": "react.com",
+    "status": "LEARNED"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjRiY2I5NDljZmFkYjgwMzZiOTJiYmYiLCJpYXQiOjE2NDkxMzQ0ODV9.eqi4fO9nTihmna8cr28YE1T5BVzN00UtO4CAUHhtXVs
+
+###
+PUT http://localhost:5000/api/posts/624bcc509cfadb8036b92bc5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjRiY2I5NDljZmFkYjgwMzZiOTJiYmYiLCJpYXQiOjE2NDkxMzQ0ODV9.eqi4fO9nTihmna8cr28YE1T5BVzN00UtO4CAUHhtXVs
+
+{
+    "title": "Vue",
+    "description": "VUE",
+    "url": "vejs.org",
+    "status": "LEARNING"
+}
+
+###
+DELETE http://localhost:5000/api/posts/624bcc509cfadb8036b92bc5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjRiY2I5NDljZmFkYjgwMzZiOTJiYmYiLCJpYXQiOjE2NDkxMzQ0ODV9.eqi4fO9nTihmna8cr28YE1T5BVzN00UtO4CAUHhtXVs
